@@ -1,0 +1,156 @@
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+p, li {
+  font-family: Arial, sans-serif;
+  color: #202020;
+  line-height: 1.5;
+}
+
+h3 {
+    border-bottom: #202020 1px solid;
+    margin-top: 30px;
+}
+
+h3.no-border {
+    border-bottom: none; /* override for this one */
+    margin-top: 20px;
+}
+
+body {
+    margin: 20px;
+    padding-top: 50px; /* adjust to navbar height */
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    position: fixed;   /* makes it fixed */
+    top: 0;            /* stick to the very top */
+    left: 0;
+    width: 100%;       /* full width */
+    z-index: 1000;     /* stay above other content */
+}
+
+#personal-info, #skills, #education, #work-experience, #references, #portfolio {
+  scroll-margin-top: 100px;
+}
+
+a {
+  font-family: Arial, sans-serif;
+  color: #202020;
+  line-height: 1.5;
+}
+
+.navbar a {
+    flex: 1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.resume-section {
+    background-color: rgba(236, 228, 228, 0.315);
+    padding: 40px;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+
+    /* Animation */
+    opacity: 0;                   /* hidden by default */
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s;        /* slight delay for smooth effect */
+}
+
+.portfolio-section {
+    background-color: rgba(236, 228, 228, 0.315);
+    border-radius: 5px;
+    display: block;
+    max-width: 800px;
+
+    /* Animation */
+    opacity: 0;                   /* hidden by default */
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s;        /* slight delay for smooth effect */
+}
+
+.portfolio-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 0px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #636363;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.personal-info {
+    position: relative;
+    padding: 15px;
+    max-width: 600px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+
+.info-text {
+    text-align: center;
+    margin-right: 200px;
+}
+
+.profile-pic {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.personal-info p {
+    margin: 5px 0;
+}
+
+.objectives {
+    text-align: justify;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;        /* start invisible */
+    transform: translateY(20px); /* slight slide up effect */
+  }
+  to {
+    opacity: 1;        /* fully visible */
+    transform: translateY(0);
+  }
+}
